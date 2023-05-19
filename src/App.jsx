@@ -28,29 +28,44 @@ function App() {
     };
   }, [country]);
 
-  const handleSearch = () => {
-    setCountry(country.trim());
+  const handleSearch = (event) => {
+event.preventDefault();
+handleSearchCampus();
+   
+    
+  };
+
+  const handleSearchCampus = (event) => {
+    setCountry(event.target.value);
+  
   };
 
   return (
     <>
-      <div className="search">
+      <form className="search" onSubmit={handleSearch}>
         <label>
-          Search country:
+          Search Campus:
           <input
             type="text"
             value={country}
-            onChange={(e) => setCountry(e.target.value)}
+            placeholder="Enter country"
+
+            onChange={handleSearchCampus}
           />
         </label>
         <br />
 
         <button onClick={handleSearch}>Search</button>
-      </div>
+      </form>
+
+      
+    
       <div className="container">
 
       {campus.map((item, index) => {
+        
         return (
+          
             <div key={index} className="card">
               <h1>{item.country}</h1>
               <h2>{item.name}</h2>

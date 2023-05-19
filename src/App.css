@@ -31,9 +31,11 @@
     font-size: 1rem;
     cursor: pointer;
 }
+.search button:hover {
+    background-color: #051852;
+}
 
-
-.container {
+/* .container {
 display: grid;
 grid-template-columns:  auto auto;
 }
@@ -47,4 +49,45 @@ grid-template-columns:  auto auto;
   box-shadow: 0 2px 5px rgba(237, 230, 230, 0.1);
   background-color: #161F30;
   padding-bottom: 1rem;
+} */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #161F30;
+}
+.card:hover {
+  box-shadow: 0 3px 5px rgba(34, 130, 239, 0.2);
+  transform: scale(1.05);
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 14px;
+  color: #888;
 }
