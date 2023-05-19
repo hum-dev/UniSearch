@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.search {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #646cff;
+}
+
+.search label {
+    font-size: 1rem;
+    display: flex;
+    gap: 1rem;
+    color: #646cff;
+}
+
+.search button {
+    background-color: #646cff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.container {
+display: grid;
+grid-template-columns:  auto auto;
+}
+.card {
+
+  max-width: 400px;
+  margin: 2rem;
+ 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(237, 230, 230, 0.1);
+  background-color: #161F30;
+  padding-bottom: 1rem;
+}
