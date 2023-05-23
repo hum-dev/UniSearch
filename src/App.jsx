@@ -13,7 +13,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://universities.hipolabs.com/search?country=${country}`
+          `https://universitiesapi.onrender.com/v1/api/universities/${country}`
         );
         const campus = await response.json();
         setCampus(campus);
@@ -67,10 +67,13 @@ handleSearchCampus();
         return (
           
             <div key={index} className="card">
-              <h1>{item.country}</h1>
-              <h2>{item.name}</h2>
-              <h3>{item.domains}</h3>
-              <h4>{item.web_pages}</h4>
+              <div className="content">
+                <span>Name:</span> <h2> {item.name}</h2>
+                <span>Country:</span> <h1>  {item.country}</h1> <br />
+                <span>Domain:</span> <h3> {item.domains}</h3>
+                <span>Web-page:</span> <h4> {item.web_pages}</h4>
+              </div>
+             
             </div>
         );
       })}
